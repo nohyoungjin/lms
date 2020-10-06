@@ -1,0 +1,139 @@
+<!--#include file="inc/header.asp"-->
+
+		<div class="container">
+			<div class="content">
+
+				<div class="spot">
+					<h2 class="h_t2">관리자 계정</h2>
+					<a href="#dialog_01" class="btn_big aside popup-with-move-anim link">신규등록</a>
+
+					<div id="dialog_01" class="dialog zoom-anim-dialog mfp-hide wf600">
+						<div class="modal_box">
+							<div class="modal_header">
+								<h3>신규등록</h3>
+							</div>
+							<article>
+								<div class="article_content">
+									
+									<table width="100%" cellspacing="0" class="tbl_type">
+										<caption></caption>
+										<colgroup>
+											<col width="140">
+											<col>
+										</colgroup>
+										<tbody>
+										<tr>
+											<th scope="row">이름</th>
+											<td>
+												<div class="item">
+													<input type="text" name="" title="레이블 텍스트" class="i_text w50">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">아이디</th>
+											<td>
+												<div class="item">
+													<input type="text" name="" title="레이블 텍스트" class="i_text w50">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">패스워드</th>
+											<td>
+												<div class="item">
+													<input type="password" name="" title="레이블 텍스트" class="i_text w50">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">패스워드 확인</th>
+											<td>
+												<div class="item">
+													<input type="password" name="" title="레이블 텍스트" class="i_text w50">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">연락처</th>
+											<td>
+												<div class="item">
+													<select name="" class="select wf90">
+														<option>선택</option>
+													</select> 
+													<span class="txt_blank">-</span>
+													<input type="text" name="" title="레이블 텍스트" class="i_text wf90">  
+													<span class="txt_blank">-</span>
+													<input type="text" name="" title="레이블 텍스트" class="i_text wf90">  
+												</div>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+
+									<div class="btn_cen">
+										<a href="javascript:" class="btn_big">등록</a>
+										<a href="javascript:" class="btn_big pop_close">취소</a>
+									</div>
+
+								</div>
+							</article>
+						</div>
+					</div>
+
+				</div>
+
+				<table class="tbl_list">
+					<caption></caption>
+					<colgroup>
+						<col width="10%">
+						<col width="10%">
+						<col width="25%">
+						<col width="25%">
+						<col width="30%">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">번호</th>
+						<th scope="col">이름</th>
+						<th scope="col">아이디</th>
+						<th scope="col">연락처</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>
+							<span class="wrap_check">
+								<input type="checkbox" id="check" title="" class="check">
+								<label for="check" class=""><span class="blind">선택</span></label>
+							</span>
+						</td>
+						<td>1</td>
+						<td>홍길동</td>
+						<td>abc333</td>
+						<td>010-0000-0000</td>
+					</tr>
+					</tbody>
+				</table>
+
+				<div class="a_r">
+					<a href="javascript:" class="btn_big">삭제</a>
+				</div>
+
+				<div class="paging">
+					<button class="btn_first"><span class="blind">처음으로</span></button>
+					<button class="btn_prev"><span class="blind">이전 페이지</span></button>
+					<a class="on" href="javascript:void(0);" title="현재 페이지">1</a>
+					<a href="javascript:void(0);">2</a>
+					<a href="javascript:void(0);">3</a>
+					<a href="javascript:void(0);">4</a>
+					<a href="javascript:void(0);">5</a>
+					<button class="btn_next"><span class="blind">다음 페이지</span></button>
+					<button class="btn_last"><span class="blind">마지막 페이지</span></button>
+				</div>
+
+			</div>
+		</div>
+
+<!--#include file="inc/footer.asp"-->

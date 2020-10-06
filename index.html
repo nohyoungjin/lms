@@ -1,0 +1,390 @@
+<!--#include file="inc/header.asp"-->
+
+		<div class="container">
+			<div class="content">
+
+				<div class="spot">
+					<h2 class="h_t2">LMS 발송</h2>
+				</div>
+
+				<table width="100%" cellspacing="0" class="tbl_type">
+					<caption></caption>
+					<colgroup>
+						<col width="10%">
+						<col width="40%">
+						<col width="10%">
+						<col width="40%">
+					</colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">보내는 사람</th>
+						<td colspan="3">
+							<div class="item">
+								<select name="" class="select w15">
+									<option>010-6334-1550</option>
+								</select> 
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">발송내용</th>
+						<td class="v_t">
+							<div class="item">
+								<textarea name="" cols="50" rows="11" title="레이블 텍스트" class="i_text w100 content" onKeyUp="javascript:fnChkByte(this,'1000')">
+안녕하세요? %받는 사람%님.
+행복ICT 홍길동 입니다.
+
+하기의 프로젝트 정보를 공유 드립니다.
+PJT명:
+투입기간:
+
+PJT 참여 의사가 있으시면 요청 단가와 참여의사를 
+문자로 회신하여 주시기 바랍니다. 아울려 최신 프로필을 
+아래의 메일주소로 송부하여 주시기바랍니다. 
+twosun@happyict.co.kr
+
+좋은 하루 되십시오. 감사합니다.
+								</textarea>
+								<p class="memo">(<span id="byteInfo">0</span>/1000byte)</p>
+							</div>
+						</td>
+						<th scope="row">발송대상<br>(숫자만 입력)</th>
+						<td class="v_t">
+							<div class="item">
+								<textarea name="" cols="50" rows="7" title="레이블 텍스트" class="i_text w100"></textarea>
+							</div>
+
+							<div class="btn_cen">
+								<a href="#dialog_01" class="btn_big target popup-with-move-anim link">대상조회</a>
+							</div>
+
+							<div id="dialog_01" class="dialog zoom-anim-dialog mfp-hide wf1000">
+								<div class="modal_box">
+									<div class="modal_header">
+										<h3>대상조회</h3>
+									</div>
+									<article>
+										<div class="article_content cont_lms">
+											
+											<table width="100%" cellspacing="0" class="tbl_type">
+												<caption></caption>
+												<colgroup>
+													<col width="140">
+													<col>
+												</colgroup>
+												<tbody>
+												<tr>
+													<th scope="row">사업구분</th>
+													<td>
+														<div class="item">
+															<span class="wrap_radio wf120">
+																<input type="radio" name="work" id="A1" class="radio" checked>
+																<label for="A1"> ERP</label>
+															</span>		
+															<span class="wrap_radio wf140">
+																<input type="radio" name="work" id="A2" class="radio">
+																<label for="A2"> 자동화</label>
+															</span>
+															<span class="wrap_radio wf120">
+																<input type="radio" name="work" id="A3" class="radio">
+																<label for="A3"> 일반</label>
+															</span>	
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">기술분야</th>
+													<td>
+														<div class="skill_1 item">
+															<span class="wrap_radio wf120">
+																<input type="radio" name="skill" id="B1" class="radio">
+																<label for="B1"> 전체</label>
+															</span>		
+															<span class="wrap_radio wf140">
+																<input type="radio" name="skill" id="B2" class="radio">
+																<label for="B2"> 컨설턴트</label>
+															</span>
+															<span class="wrap_radio wf120">
+																<input type="radio" name="skill" id="B3" class="radio">
+																<label for="B3"> 개발</label>
+															</span>	
+														</div>
+														<div class="skill_2 item">
+															<span class="wrap_radio wf120">
+																<input type="radio" name="skill" id="B4" class="radio">
+																<label for="B4"> 기획</label>
+															</span>
+															<span class="wrap_radio wf140">
+																<input type="radio" name="skill" id="B5" class="radio">
+																<label for="B5"> 디자인</label>
+															</span>
+															<span class="wrap_radio wf140">
+																<input type="radio" name="skill" id="B6" class="radio">
+																<label for="B6"> 퍼블리싱</label>
+															</span>	
+															<span class="wrap_radio wf120">
+																<input type="radio" name="skill" id="B7" class="radio">
+																<label for="B7"> 개발</label>
+															</span>	
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">모듈/skill</th>
+													<td>
+														<div class="item">
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C1" class="check">
+																<label for="C1"> F1</label>
+															</span>
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C2" class="check">
+																<label for="C2"> CO</label>
+															</span>
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C3" class="check">
+																<label for="C3"> TR</label>
+															</span>
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C4" class="check">
+																<label for="C4"> MM</label>
+															</span>
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C5" class="check">
+																<label for="C5"> SD</label>
+															</span>
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C6" class="check">
+																<label for="C6"> BC</label>
+															</span>
+														</div>
+														<div class="item">
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C7" class="check">
+																<label for="C7"> PP</label>
+															</span>
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C8" class="check">
+																<label for="C8"> PM</label>
+															</span>
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C9" class="check">
+																<label for="C9"> PO</label>
+															</span>
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C10" class="check">
+																<label for="C10"> PS</label>
+															</span>
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C11" class="check">
+																<label for="C11"> HR</label>
+															</span>
+															<span class="wrap_check wf120">
+																<input type="checkbox" name="module" id="C12" class="check">
+																<label for="C12"> RE</label>
+															</span>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">&nbsp;</th>
+													<td>
+														<div class="clearfix">
+															<div class="f_l w20">
+																<strong>기획 선택 시</strong>
+																<p class="plan">-> 모듈/skill 없음</p>
+															</div>
+															<div class="f_l w25">
+																<strong>디자인 선택 시</strong>
+																<span class="wrap_check">
+																	<input type="checkbox" name="design" id="D1" class="check">
+																	<label for="D1"> 디자인(퍼블리싱 가능)</label>
+																</span>
+																<span class="wrap_check">
+																	<input type="checkbox" name="design" id="D2" class="check">
+																	<label for="D2"> 디자인(퍼블리싱 불가능)</label>
+																</span>	
+															</div>
+															<div class="f_l w20">
+																<strong>퍼블리싱 선택 시</strong>
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="publish" id="E1" class="check">
+																	<label for="E1"> React</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="publish" id="E2" class="check">
+																	<label for="E2"> Websquare</label>
+																</span>																	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="publish" id="E3" class="check">
+																	<label for="E3"> Angular</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="publish" id="E4" class="check">
+																	<label for="E4"> Alopex</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="publish" id="E5" class="check">
+																	<label for="E5"> Vue</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="publish" id="E6" class="check">
+																	<label for="E6"> 기타</label>
+																</span>	
+															</div>
+															<div class="f_l w35">
+																<strong>개발 선택 시</strong>
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F1" class="check">
+																	<label for="F1"> JAVA</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F2" class="check">
+																	<label for="F2"> C/C++</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F3" class="check">
+																	<label for="F3"> Python</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F4" class="check">
+																	<label for="F4"> DevExtreme</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F5" class="check">
+																	<label for="F5"> .NET</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F6" class="check">
+																	<label for="F6"> Nexcore</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F7" class="check">
+																	<label for="F7"> Node.js</label>
+																</span>	
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F8" class="check">
+																	<label for="F8"> GroupWare</label>
+																</span>		
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F9" class="check">
+																	<label for="F9"> ASP(구)</label>
+																</span>		
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F10" class="check">
+																	<label for="F10"> DevExpress</label>
+																</span>			
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F11" class="check">
+																	<label for="F11"> Android</label>
+																</span>		
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F12" class="check">
+																	<label for="F12"> IOS</label>
+																</span>		
+																<span class="wrap_check wf100">
+																	<input type="checkbox" name="develop" id="F13" class="check">
+																	<label for="F13"> 기타</label>
+																</span>		
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">인력</th>
+													<td>
+
+														<div class="item">
+															<span class="i_tit">이름</span>
+															<input type="text" name="" title="레이블 텍스트" class="i_text w50">
+															<!-- <a href="javascript:" class="btn_big excel">excel</a> -->
+															<a href="javascript:" class="btn_big enquiry">조회</a>
+														</div>
+
+														<table cellspacing="0" class="tbl_type tbl_sub">
+															<caption></caption>
+															<colgroup>
+																<col width="4%">
+																<col width="20%">
+																<col width="20%">
+																<col width="21%">
+																<col width="35%">
+															</colgroup>
+															<thead>
+															<tr>
+																<th scope="col"></th>
+																<th scope="col">이름</th>
+																<th scope="col">사업</th>
+																<th scope="col">기술</th>
+																<th scope="col">연락처</th>
+															</tr>
+															</thead>
+															<tbody>
+															<tr>
+																<td>
+																	<span class="wrap_check">
+																		<input type="checkbox" id="check" class="check">
+																		<label for="check"><span class="blind">선택</span></label>
+																	</span>
+																</td>
+																<td>홍길동</td>
+																<td>ERP</td>
+																<td>EF1, TR</td>
+																<td>010-0000-0000</td>
+															</tr>
+															</tbody>
+														</table>
+
+														<!-- 검색 결과가 없을 때 노출 -->
+
+														<!-- <div class="no_data">
+															<p>등록된 게시글이 없습니다.</p>
+														</div> -->
+
+													</td>
+												</tr>
+
+												</tbody>
+											</table>
+
+											<div class="btn_cen">
+												<a href="javascript:" class="btn_big">선택</a>
+												<a href="javascript:" class="btn_big pop_close">닫기</a>
+											</div>
+
+											<div class="paging">
+												<button class="btn_first"><span class="blind">처음으로</span></button>
+												<button class="btn_prev"><span class="blind">이전 페이지</span></button>
+												<a class="on" href="javascript:void(0);" title="현재 페이지">1</a>
+												<a href="javascript:void(0);">2</a>
+												<a href="javascript:void(0);">3</a>
+												<a href="javascript:void(0);">4</a>
+												<a href="javascript:void(0);">5</a>
+												<button class="btn_next"><span class="blind">다음 페이지</span></button>
+												<button class="btn_last"><span class="blind">마지막 페이지</span></button>
+											</div>
+
+										</div>
+									</article>
+								</div>
+							</div>
+
+							<div class="wrap_fileSearch">
+								<span class="input_m w40 fileName"></span>
+								<a href="#file03" class="btn_slight wf100" title="대상자 등록">등록</a>
+								<input type="file" id="file03" class="input _file" title="파일선택">
+							</div>
+							<p class="memo">(발송건수:0건)</p>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+
+				<div class="btn_cen">
+					<a href="javascript:" class="btn_big">발송하기</a>
+				</div>
+
+			</div>
+		</div>
+
+<!--#include file="inc/footer.asp"-->

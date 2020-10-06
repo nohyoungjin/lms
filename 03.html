@@ -1,0 +1,107 @@
+<!--#include file="inc/header.asp"-->
+
+		<div class="container">
+			<div class="content">
+
+				<div class="spot">
+					<h2 class="h_t2">발송 이력</h2>
+				</div>
+
+				<div class="topserch">
+					<div class="box_topsrch">
+						<ul>
+							<li>
+								<label for="">기간</label>
+								<input type="text" class="input_m wf120" title="시작날짜 입력"> 
+								<a href="" class="ico_ date">날짜 검색</a>
+								<span class="txt_wave">~</span>
+								<input type="text" class="input_m wf120" title="종료날짜 입력"> 
+								<a href="" class="ico_ date">날짜 검색</a>
+							</li>
+						</ul>
+					</div>
+					<div class="btn_cen">
+						<a href="javascript:" class="btn_big edit">조회</a>
+					</div>
+				</div>
+
+				<table class="tbl_list">
+					<caption></caption>
+					<colgroup>
+						<col width="10%">
+						<col width="20%">
+						<col width="20%">
+						<col width="40%">
+						<col width="10%">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">발송일</th>
+						<th scope="col">발송인</th>
+						<th scope="col">발송내용</th>
+						<th scope="col">발송건수</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>1000</td>
+						<td>2019-05-31 14:30:29</td>
+						<td>홍길동</td>
+						<td>
+							<a href="#dialog_01" class="popup-with-move-anim link">안녕하세요</a>
+
+							<div id="dialog_01" class="dialog zoom-anim-dialog mfp-hide">
+								<div class="modal_box">
+									<div class="modal_header">
+										<h3>발송내용</h3>
+									</div>
+									<article>
+										<div class="article_content">
+											<p class="bod_cont">
+												안녕하세요? %받는 사람%님. <br>
+												행복ICT 홍길동 입니다. <br><br>
+
+												하기의 프로젝트 정보를 공유 드립니다. <br>
+												PJT명: <br>
+												투입기간: <br><br>
+
+												PJT 참여 의사가 있으시면 요청 단가와 <br>
+												참여의사를 문자로 회신하여 <br>
+												주시기 바랍니다. 아울려 최신 프로필을 <br>
+												아래의 메일주소로 <br>
+												송부하여 주시기바랍니다. <br>
+												twosun@happyict.co.kr <br><br>
+												 
+												좋은 하루 되십시오. 감사합니다.
+											</p>
+
+											<div class="btn_cen">
+												<a href="javascript:" class="btn_big pop_close">확인</a>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</td>
+						<td>1</td>
+					</tr>
+					</tbody>
+				</table>
+
+				<div class="paging">
+					<button class="btn_first"><span class="blind">처음으로</span></button>
+					<button class="btn_prev"><span class="blind">이전 페이지</span></button>
+					<a class="on" href="javascript:void(0);" title="현재 페이지">1</a>
+					<a href="javascript:void(0);">2</a>
+					<a href="javascript:void(0);">3</a>
+					<a href="javascript:void(0);">4</a>
+					<a href="javascript:void(0);">5</a>
+					<button class="btn_next"><span class="blind">다음 페이지</span></button>
+					<button class="btn_last"><span class="blind">마지막 페이지</span></button>
+				</div>
+
+			</div>
+		</div>
+
+<!--#include file="inc/footer.asp"-->
