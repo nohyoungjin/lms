@@ -32,7 +32,7 @@ body {background:#f1f1f1;_text-align:center}
 
 .blind {display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0.1em;line-height:0.01em;text-indent:-9999px}
 
-/* icon */
+/* ico */
 
 .ico {display:inline-block;background-image:url(../img/common/img_common.png);background-repeat:no-repeat;vertical-align:middle;text-indent:-99999px}
 

@@ -19,7 +19,7 @@ $(function() {
 		$('.popup-with-move-anim').magnificPopup({
 
 			type: 'inline',
-			callbacks : {
+			callbacks: {
 				open : function() { $(window).load(); }
 			},
 
@@ -39,7 +39,7 @@ $(function() {
 
 		//
 
-		$('.pop_close').on('click',function(){                                                      
+		$('.pop_close').on('click',function() {                                                      
 			$.magnificPopup.proto.close.call(this);
 		}); 
 
@@ -58,7 +58,7 @@ $(function() {
 
 	$("input:radio[id=A1], input:radio[id=A2]").on('click', function() { 
 
-		if( $(this).prop('checked') ) { 
+		if ($(this).prop('checked')) { 
 
 			// $(this).parent().addClass("selected"); 
 
@@ -79,7 +79,7 @@ $(function() {
 
 	$("input:radio[id=A3]").on('click', function() { 
 
-		if( $(this).prop('checked') ) { 
+		if ($(this).prop('checked')) { 
 
 			$(".skill_1").css("display","none"); 
 			$(".skill_2").css("display","block"); 
@@ -102,7 +102,7 @@ $(function() {
 
 	$("input:radio[id=B4]").on('click', function() { 
 
-		if( $(this).prop('checked') ) { 
+		if ($(this).prop('checked')) { 
 
 			$('input[name="design"], input[name="publish"], input[name="develop"]').attr("checked", false);
 			$('input[name="design"], input[name="publish"], input[name="develop"]').attr("disabled", true);
@@ -115,7 +115,7 @@ $(function() {
 
 	$("input:radio[id=B5]").on('click', function() { 
 
-		if( $(this).prop('checked') ) { 
+		if ($(this).prop('checked')) { 
 
 			$('input[name="design"], input[name="publish"], input[name="develop"]').attr("checked", false);
 			$('input[name="publish"], input[name="develop"]').attr("disabled", true);
@@ -128,7 +128,7 @@ $(function() {
 
 	$("input:radio[id=B6]").on('click', function() { 
 
-		if( $(this).prop('checked') ) { 
+		if ($(this).prop('checked')) { 
 
 			$('input[name="design"], input[name="publish"], input[name="develop"]').attr("checked", false);
 			$('input[name="design"], input[name="develop"]').attr("disabled", true);
@@ -140,7 +140,7 @@ $(function() {
 
 	$("input:radio[id=B7]").on('click', function() { 
 
-		if( $(this).prop('checked') ) { 
+		if ($(this).prop('checked')) { 
 
 			$('input[name="design"], input[name="publish"], input[name="develop"]').attr("checked", false);
 			$('input[name="design"], input[name="publish"]').attr("disabled", true);
@@ -156,22 +156,22 @@ $(function() {
 
 /* input[type="file"] 이벤트 */
 
-function inputFileEvent ( btnFile, inputFile, btnDelete ) {
+function inputFileEvent (btnFile, inputFile, btnDelete) {
 
 	// 파일첨부 링크 클릭 시
 
-	$( btnFile ).bind( "click", function() {
-		var fileId = $( this ).attr( "href" ) ;
-		$( fileId ).click() ;
+	$(btnFile).bind("click", function() {
+		var fileId = $(this).attr("href");
+		$(fileId).click() ;
 
 		return false;
 	}) ;
 
 	// 파일 첨부 완료, 변경 시
 
-	$( inputFile ).change( function( e ) {
-		var fileObj  = $( this ).val()
-			, Prt = $( this ).parent()
+	$(inputFile).change(function(e) {
+		var fileObj = $(this).val()
+			, Prt = $(this).parent()
 			, pathHeader
 			, pathMiddle
 			, pathEnd
@@ -179,34 +179,34 @@ function inputFileEvent ( btnFile, inputFile, btnDelete ) {
 			, fileName
 			, extName ;
 
-		if ( fileObj != "" ) {
-			pathHeader = fileObj.lastIndexOf( "\\" ) ;
-			pathMiddle = fileObj.lastIndexOf( "." ) ;
+		if (fileObj != "") {
+			pathHeader = fileObj.lastIndexOf("\\");
+			pathMiddle = fileObj.lastIndexOf(".");
 			pathEnd = fileObj.length;
-			fileName = fileObj.substring( pathHeader + 1, pathMiddle ) ;
-			extName = fileObj.substring( pathMiddle + 1, pathEnd ) ;
-			allFilename = fileName + "." + extName ;
+			fileName = fileObj.substring(pathHeader + 1, pathMiddle);
+			extName = fileObj.substring(pathMiddle + 1, pathEnd);
+			allFilename = fileName + "." + extName;
 
-			$( this ).parent().children( ".fileName" ).html( allFilename ) ;
-			$(Prt).children( ".btn_slight" ).hide() ;
-			$(Prt).children( ".delete" ).detach() ;
-			$(Prt).children( ".fileName" ).after( '<a href="#" class="ico_ del delete">첨부된 ' + allFilename + ' 파일 삭제</a>' ) ;
-			$(Prt).children( ".delete" ).fadeIn() ;
+			$(this).parent().children(".fileName").html( allFilename );
+			$(Prt).children(".btn_slight").hide();
+			$(Prt).children(".delete").detach();
+			$(Prt).children(".fileName").after('<a href="#" class="ico_ del delete">첨부된 ' + allFilename + ' 파일 삭제</a>');
+			$(Prt).children(".delete").fadeIn();
 		}
 	}) ;
 
 	// 파일 삭제 시
 
-	$( document ).delegate( btnDelete, "click", DeleteFileEvt ) ;
+	$(document).delegate(btnDelete, "click", DeleteFileEvt) ;
 
 	function DeleteFileEvt() {
-		var _this = $( this ) ;
-		$( _this ).parent().children( "input[type='file']" ).val( null ) ;
-		$( _this ).parent().children( ".btn_slight" ).show() ;
-		$( _this ).parent().children( ".fileName" ).html( "" ) ;
-		$( _this ).detach() ;
+		var _this = $(this) ;
+		$(_this).parent().children("input[type='file']").val(null);
+		$(_this).parent().children(".btn_slight").show();
+		$(_this).parent().children(".fileName").html("");
+		$(_this).detach() ;
 
-		return false ;
+		return false;
 	}
 
 }
@@ -224,22 +224,22 @@ function fnChkByte(obj, maxByte) {
     var one_char = "";
     var str2 = "";
 
-    for(var i=0; i<str_len; i++) {
+    for (var i = 0; i < str_len; i++) {
         one_char = str.charAt(i);
 
-        if(escape(one_char).length > 4) {
+        if (escape(one_char).length > 4) {
             rbyte += 2; // 한글2Byte
         } else {
             rbyte++; // 영문 등 나머지 1Byte
         }
 
-        if(rbyte <= maxByte) {
-            rlen = i+1; // return할 문자열 갯수
+        if (rbyte <= maxByte) {
+            rlen = i + 1; // return할 문자열 갯수
         }
      }
 
 
-     if(rbyte > maxByte) {
+     if (rbyte > maxByte) {
 		// alert("한글 "+(maxByte/2)+"자 / 영문 "+maxByte+"자를 초과 입력할 수 없습니다.");
 		alert("메세지는 최대 " + maxByte + "byte를 초과할 수 없습니다.")
 		str2 = str.substr(0,rlen); // 문자열 자르기
@@ -272,18 +272,18 @@ function sample6_execDaumPostcode() {
 			}
 
 			// 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
-			if(data.userSelectedType === 'R'){
+			if (data.userSelectedType === 'R') {
 				// 법정동명이 있을 경우 추가한다. (법정리는 제외)
 				// 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-				if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+				if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
 					extraAddr += data.bname;
 				}
 				// 건물명이 있고, 공동주택일 경우 추가한다.
-				if(data.buildingName !== '' && data.apartment === 'Y'){
+				if (data.buildingName !== '' && data.apartment === 'Y') {
 					extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
 				}
 				// 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-				if(extraAddr !== ''){
+				if (extraAddr !== '') {
 					extraAddr = ' (' + extraAddr + ')';
 				}
 			}
