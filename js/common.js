@@ -56,20 +56,20 @@ $(function() {
 
 	// 사업구분
 
-	$("input:radio[id=A1], input:radio[id=A2]").on('click', function() { 
+	$('input:radio[id=A1], input:radio[id=A2]').on('click', function() { 
 
 		if ($(this).prop('checked')) { 
 
-			// $(this).parent().addClass("selected"); 
+			// $(this).parent().addClass('selected'); 
 
-			$(".skill_1").css("display","block"); 
-			$(".skill_2").css("display","none"); 
+			$('.skill_1').css('display','block'); 
+			$('.skill_2').css('display','none'); 
 
 			$('input[name="module"]').removeAttr('disabled');
 			
 		} else { 
 
-			// $(this).parent().removeClass("selected"); 
+			// $(this).parent().removeClass('selected'); 
 
 		} 
 
@@ -77,17 +77,17 @@ $(function() {
 
 	/*  */
 
-	$("input:radio[id=A3]").on('click', function() { 
+	$('input:radio[id=A3]').on('click', function() { 
 
 		if ($(this).prop('checked')) { 
 
-			$(".skill_1").css("display","none"); 
-			$(".skill_2").css("display","block"); 
+			$('.skill_1').css('display','none'); 
+			$('.skill_2').css('display','block'); 
 
-			$('input[name="module"]').attr("disabled", true);
-			$('input[name="module"]').attr("checked", false);
+			$('input[name="module"]').attr('disabled', true);
+			$('input[name="module"]').attr('checked', false);
 
-			$("#B4").attr("checked", true);
+			$('#B4').attr('checked', true);
 
 		}
 
@@ -96,16 +96,16 @@ $(function() {
 
 	// 기술분야 - 모듈/skill
 
-	$('input[name="design"], input[name="publish"], input[name="develop"]').attr("disabled", true);
+	$('input[name="design"], input[name="publish"], input[name="develop"]').attr('disabled', true);
 
 	/*  */
 
-	$("input:radio[id=B4]").on('click', function() { 
+	$('input:radio[id=B4]').on('click', function() { 
 
 		if ($(this).prop('checked')) { 
 
-			$('input[name="design"], input[name="publish"], input[name="develop"]').attr("checked", false);
-			$('input[name="design"], input[name="publish"], input[name="develop"]').attr("disabled", true);
+			$('input[name="design"], input[name="publish"], input[name="develop"]').attr('checked', false);
+			$('input[name="design"], input[name="publish"], input[name="develop"]').attr('disabled', true);
 
 		}
 
@@ -113,12 +113,12 @@ $(function() {
 
 	/*  */
 
-	$("input:radio[id=B5]").on('click', function() { 
+	$('input:radio[id=B5]').on('click', function() { 
 
 		if ($(this).prop('checked')) { 
 
-			$('input[name="design"], input[name="publish"], input[name="develop"]').attr("checked", false);
-			$('input[name="publish"], input[name="develop"]').attr("disabled", true);
+			$('input[name="design"], input[name="publish"], input[name="develop"]').attr('checked', false);
+			$('input[name="publish"], input[name="develop"]').attr('disabled', true);
 
 			$('input[name="design"]').removeAttr('disabled');
 
@@ -126,24 +126,24 @@ $(function() {
 
 	});
 
-	$("input:radio[id=B6]").on('click', function() { 
+	$('input:radio[id=B6]').on('click', function() { 
 
 		if ($(this).prop('checked')) { 
 
-			$('input[name="design"], input[name="publish"], input[name="develop"]').attr("checked", false);
-			$('input[name="design"], input[name="develop"]').attr("disabled", true);
+			$('input[name="design"], input[name="publish"], input[name="develop"]').attr('checked', false);
+			$('input[name="design"], input[name="develop"]').attr('disabled', true);
 			$('input[name="publish"]').removeAttr('disabled');
 
 		}
 
 	});
 
-	$("input:radio[id=B7]").on('click', function() { 
+	$('input:radio[id=B7]').on('click', function() { 
 
 		if ($(this).prop('checked')) { 
 
-			$('input[name="design"], input[name="publish"], input[name="develop"]').attr("checked", false);
-			$('input[name="design"], input[name="publish"]').attr("disabled", true);
+			$('input[name="design"], input[name="publish"], input[name="develop"]').attr('checked', false);
+			$('input[name="design"], input[name="publish"]').attr('disabled', true);
 			$('input[name="develop"]').removeAttr('disabled');
 
 		}
@@ -160,8 +160,8 @@ function inputFileEvent (btnFile, inputFile, btnDelete) {
 
 	// 파일첨부 링크 클릭 시
 
-	$(btnFile).bind("click", function() {
-		var fileId = $(this).attr("href");
+	$(btnFile).bind('click', function() {
+		var fileId = $(this).attr('href');
 		$(fileId).click() ;
 
 		return false;
@@ -179,31 +179,31 @@ function inputFileEvent (btnFile, inputFile, btnDelete) {
 			, fileName
 			, extName ;
 
-		if (fileObj != "") {
-			pathHeader = fileObj.lastIndexOf("\\");
-			pathMiddle = fileObj.lastIndexOf(".");
+		if (fileObj != '') {
+			pathHeader = fileObj.lastIndexOf('\\');
+			pathMiddle = fileObj.lastIndexOf('.');
 			pathEnd = fileObj.length;
 			fileName = fileObj.substring(pathHeader + 1, pathMiddle);
 			extName = fileObj.substring(pathMiddle + 1, pathEnd);
-			allFilename = fileName + "." + extName;
+			allFilename = fileName + '.' + extName;
 
-			$(this).parent().children(".fileName").html( allFilename );
-			$(Prt).children(".btn_slight").hide();
-			$(Prt).children(".delete").detach();
-			$(Prt).children(".fileName").after('<a href="#" class="ico_ del delete">첨부된 ' + allFilename + ' 파일 삭제</a>');
-			$(Prt).children(".delete").fadeIn();
+			$(this).parent().children('.fileName').html( allFilename );
+			$(Prt).children('.btn_slight').hide();
+			$(Prt).children('.delete').detach();
+			$(Prt).children('.fileName').after('<a href="#" class="ico_ del delete">첨부된 ' + allFilename + ' 파일 삭제</a>');
+			$(Prt).children('.delete').fadeIn();
 		}
 	}) ;
 
 	// 파일 삭제 시
 
-	$(document).delegate(btnDelete, "click", DeleteFileEvt) ;
+	$(document).delegate(btnDelete, 'click', DeleteFileEvt) ;
 
 	function DeleteFileEvt() {
 		var _this = $(this) ;
-		$(_this).parent().children("input[type='file']").val(null);
-		$(_this).parent().children(".btn_slight").show();
-		$(_this).parent().children(".fileName").html("");
+		$(_this).parent().children('input[type="file"]').val(null);
+		$(_this).parent().children('.btn_slight').show();
+		$(_this).parent().children('.fileName').html('');
 		$(_this).detach() ;
 
 		return false;
@@ -221,8 +221,8 @@ function fnChkByte(obj, maxByte) {
 
     var rbyte = 0;
     var rlen = 0;
-    var one_char = "";
-    var str2 = "";
+    var one_char = '';
+    var str2 = '';
 
     for (var i = 0; i < str_len; i++) {
         one_char = str.charAt(i);
@@ -240,8 +240,8 @@ function fnChkByte(obj, maxByte) {
 
 
      if (rbyte > maxByte) {
-		// alert("한글 "+(maxByte/2)+"자 / 영문 "+maxByte+"자를 초과 입력할 수 없습니다.");
-		alert("메세지는 최대 " + maxByte + "byte를 초과할 수 없습니다.")
+		// alert('한글 ' + (maxByte/2) + '자 / 영문 ' + maxByte + '자를 초과 입력할 수 없습니다.');
+		alert('메세지는 최대 ' + maxByte + 'byte를 초과할 수 없습니다.')
 		str2 = str.substr(0,rlen); // 문자열 자르기
 		obj.value = str2;
 		fnChkByte(obj, maxByte);
@@ -274,7 +274,7 @@ function sample6_execDaumPostcode() {
 			// 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
 			if (data.userSelectedType === 'R') {
 				// 법정동명이 있을 경우 추가한다. (법정리는 제외)
-				// 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+				// 법정동의 경우 마지막 문자가 '동/로/가'로 끝난다.
 				if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
 					extraAddr += data.bname;
 				}
@@ -290,9 +290,9 @@ function sample6_execDaumPostcode() {
 
 			// 우편번호와 주소 정보를 해당 필드에 넣는다.
 			document.getElementById('sample6_postcode').value = data.zonecode;
-			document.getElementById("sample6_address").value = addr;
+			document.getElementById('sample6_address').value = addr;
 			// 커서를 상세주소 필드로 이동한다.
-			document.getElementById("sample6_detailAddress").focus();
+			document.getElementById('sample6_detailAddress').focus();
 		}
 	}).open();
 }
