@@ -123,15 +123,15 @@ body {background:#f1f1f1;_text-align:center}
 
 /* button */
 
-a.btn_sml {display:inline-block;padding:0 4px;border:1px solid #ccc;background:#fff;font-size:11px;color:#333;line-height:21px;letter-spacing:-1px;word-spacing:-1px;text-decoration:none !important;white-space:nowrap;border-radius:2px}
-a.btn_big {display:inline-block;padding:1px 8px;border:1px solid #ccc;background:#fff;font-size:13px;font-weight:700;color:#111;line-height:26px;word-spacing:-1px;text-decoration:none !important;white-space:nowrap;border-radius:2px}
+a.btn_sml {display:inline-block;padding:0 6px;border:1px solid #ccc;background:#fff;font-size:11px;color:#333;line-height:22px;word-spacing:-1px;text-decoration:none !important;white-space:nowrap;border-radius:2px}
+a.btn_big {display:inline-block;padding:1px 8px;border:1px solid #ccc;background:#fff;font-size:13px;font-weight:500;color:#111;line-height:28px;word-spacing:-1px;text-decoration:none !important;white-space:nowrap;border-radius:2px}
 
 a.btn_sml.log {position:absolute;top:16px;right:30px}
 a.btn_big.excel {top:1.5px;border:1px solid #2e8c68;background:#2e8c68;color:#fff}
 a.btn_big.postal {position:relative;top:1.5px;margin:0 0 0 5px;padding:0 12px}
 a.btn_big.enquiry {position:relative;top:1.5px;margin:0 0 0 5px;padding:0 14px}
 
-a.btn_big.target {position:relative;padding:0 8px;border:1px solid #2e8c68;background:#2e8c68;color:#fff}
+a.btn_big.target {position:relative;padding:0 10px;border:1px solid #2e8c68;background:#2e8c68;color:#fff}
 
 .btn_cen {margin:15px 0;text-align:center}
 .btn_cen a {padding:0 16px;border:1px solid #ff732e;background:#ff732e;color:#fff}
@@ -157,7 +157,7 @@ a.btn_big.target {position:relative;padding:0 8px;border:1px solid #2e8c68;backg
 /* table */
 
 .tbl_type {width:100%;border-bottom:1px solid #dddee2;font-family:'돋움',dotum;font-size:12px}
-.tbl_type th {padding:14px 0;border-top:1px solid #dddee2;background:#f1f1f3;color:#666;font-weight:bold;text-align:center}
+.tbl_type th {padding:14px 0;border-top:1px solid #dddee2;background:#f1f1f3;font-weight:500;color:#666;text-align:center}
 .tbl_type td {padding:15px 15px 13px;border-top:1px solid #dddee2;vertical-align:middle}
 
 .tbl_type .bl_ess {position:static;top:28px;left:30px;width:9px !important;height:16px !important;background:none;font-size:14px;line-height:normal !important}
